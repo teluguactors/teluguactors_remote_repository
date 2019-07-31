@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title> Displaying Data</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1 class="text-center">Employee Details</h1>
+{% if data %}
+<table class="table table-borderd text-center">
+    <thead>
+    <tr>
+        <th> Emp Name</th>
+        <th> Emp Location</th>
+        <th> Emp Salary</th>
+        <th> Emp Email</th>
+    </tr>
+    </thead>
+    {% for i in data %}
+    <tbody>
+    <tr>
+        <td>{{ i.name }}</td>
+        <td>{{ i.location }}</td>
+        <td>{{ i.salary }}</td>
+        <td>{{ i.email }}</td>
+    </tr>
+    </tbody>
+    {% endfor %}
+</table>
+{% else %}
+<h1> Data Is Not Available</h1>
+{% endif %}
+</body>
+</html>

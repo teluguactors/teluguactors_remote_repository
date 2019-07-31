@@ -1,0 +1,63 @@
+
+<html>
+<head>
+    <title>telugu actors</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+    }
+    li{
+        float: left;
+    }
+    li a{
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+
+    }
+    li a:hover:not(.active){
+        background-color: black;color: white;
+    }
+    .active{
+        background-color: green;
+    }
+    .footer{
+        position: fixed;left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+</style>
+<body>
+<ul>
+    <li><a class="active" href="/home/">home</a> </li>
+    <li><a class="active" href="/contact/">contact</a> </li>
+    <li><a class="active" href="/services/">services</a> </li>
+    <li><a class="active" href="/feedback/">feedback</a> </li>
+
+</ul>
+<center><h1>welcome to telugu actors</h1></center>
+{% block content %}
+{% endblock %}
+<footer class="footer">
+    <h1>thank you all</h1>
+</footer>
+
+</body>
+</html>
